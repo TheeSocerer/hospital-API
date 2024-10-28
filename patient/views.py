@@ -5,6 +5,7 @@ from rest_framework import status
 from django.shortcuts import get_object_or_404
 from .models import Patient, MedicalRecord
 from .serializers import PatientSerializer, MedicalRecordSerializer
+from rest_framework.authtoken.views import obtain_auth_token 
 
 class PatientViewSet(viewsets.ModelViewSet):
     queryset = Patient.objects.all()
